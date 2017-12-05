@@ -64,6 +64,14 @@ class {typename}(memoryslots):
         'Reduce'
         return type(self), tuple(self)
 
+    def __hash__(self):
+        'Hash'
+        return hash(tuple(self))
+    
+    def to_json(self):
+        'Iter'
+        return list(self)
+
 {field_defs}
 """
 
